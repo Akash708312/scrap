@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Siddhi 💕</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Continuous Kiss Rain -->
+    <div id="kissRain"></div>
+    
+    <!-- Rose Petals -->
+    <div id="rosePetals"></div>
+    
+    <!-- Floating Hearts Background -->
+    <div id="floatingHearts"></div>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <button class="prev-btn" id="prevBtn" onclick="previousScene()" style="display:none;">
+            ◄ Previous
+        </button>
+        <button class="next-btn" id="nextBtn" onclick="nextScene()">
+            <span id="nextBtnText">💝 Start Your Special Day</span>
+        </button>
+    </div>
+
+    <!-- Scene 1: Opening with Name Animation -->
+    <section id="scene1" class="scene active">
+        <div class="starry-background"></div>
+        <div class="name-container">
+            <h1 class="animated-name">
+                <span class="greeting-line">HAPPY</span>
+                <span class="greeting-line">BIRTHDAY</span>
+                <span class="greeting-line">SIDDHI</span>
+                <span class="greeting-line"> ❤️</span>
+            </h1>
+            <div class="hearts-burst"></div>
+        </div>
+    </section>
+
+    <!-- Scene 2: Love Lock -->
+    <section id="scene2" class="scene">
+        <div class="love-lock-container">
+            <h2 class="scene-title">Unlock My Heart 💕</h2>
+            <div class="lock-wrapper">
+                <div class="lock" id="lock">
+                    <div class="lock-body">
+                        <div class="keyhole" id="keyhole">🔐</div>
+                    </div>
+                </div>
+                <div class="hidden-message" id="hiddenMessage">
+                    <div class="message-content">
+                        <h3>You hold the key to my heart! 💖</h3>
+                        <p>Every moment with you is magical, my love!</p>
+                        <div class="kiss-explosion"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="instruction">Click the lock to unlock 💕</p>
+        </div>
+    </section>
+
+    <!-- Scene 3: Simple Love Tap Game -->
+    <section id="scene3" class="scene">
+        <div class="love-tap-container">
+            <h2 class="scene-title">Send Me Your Love! 💕</h2>
+            <div class="love-meter-container">
+                <div class="love-meter">
+                    <div class="love-meter-fill" id="loveMeterFill"></div>
+                </div>
+                <p class="love-percentage" id="lovePercentage">0%</p>
+            </div>
+            <div class="tap-heart" id="tapHeart">
+                <span class="heart-emoji">💖</span>
+            </div>
+            <p class="tap-instruction">Tap the heart to fill the love meter! 💕</p>
+            <div class="game-message" id="gameMessage"></div>
+        </div>
+    </section>
+
+    <!-- Scene 4: Floating Love Bottles -->
+    <section id="scene4" class="scene">
+        <div class="bottles-container">
+            <h2 class="scene-title">Messages in Bottles 💌</h2>
+            <p class="instruction">Click each bottle to read my messages 💕</p>
+            <div class="bottles-area">
+                <div class="bottle" data-message="You make my world beautiful every single day! 🌸">
+                    <div class="bottle-body">💌</div>
+                    <div class="bottle-message"></div>
+                </div>
+                <div class="bottle" data-message="Your smile is my favorite thing in the whole universe! 😊">
+                    <div class="bottle-body">💌</div>
+                    <div class="bottle-message"></div>
+                </div>
+                <div class="bottle" data-message="I fall in love with you more every single day! 💕">
+                    <div class="bottle-body">💌</div>
+                    <div class="bottle-message"></div>
+                </div>
+                <div class="bottle" data-message="You're not just my girlfriend, you're my best friend! 👫">
+                    <div class="bottle-body">💌</div>
+                    <div class="bottle-message"></div>
+                </div>
+                <div class="bottle" data-message="Every moment with you is a precious memory! ✨">
+                    <div class="bottle-body">💌</div>
+                    <div class="bottle-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scene 5: Memory Lane Carousel -->
+    <section id="scene5" class="scene">
+        <div class="carousel-container">
+            <h2 class="scene-title">Our Beautiful Moments 📸</h2>
+            <p class="instruction">Tap a photo to enlarge it 💕</p>
+            <div class="carousel-3d" id="carousel3d">
+                <div class="carousel-item" style="--i:0">
+                    <div class="photo-card" data-index="0">
+                        <img src="pics/WhatsApp Image 2026-09-11 at 9.22.33 PM.jpeg" alt="Us Together">
+                        <p class="photo-caption">You & Me Forever 💑</p>
+                    </div>
+                </div>
+                <div class="carousel-item" style="--i:1">
+                    <div class="photo-card" data-index="1">
+                        <img src="pics/WhatsApp Image 2026-09-11 at 9.22.34 PM.jpeg" alt="Happy Moments">
+                        <p class="photo-caption">Making Memories Together 💕</p>
+                    </div>
+                </div>
+                <div class="carousel-item" style="--i:2">
+                    <div class="photo-card" data-index="2">
+                        <img src="pics/WhatsApp Image 2026-09-11 at 9.22.36 PM.jpeg" alt="Sweet Times">
+                        <p class="photo-caption">My Favorite Person 🌟</p>
+                    </div>
+                </div>
+                <div class="carousel-item" style="--i:3">
+                    <div class="photo-card" data-index="3">
+                        <img src="pics/WhatsApp Image 2026-09-11 at 9.24.46 PM.jpeg" alt="Best Days">
+                        <p class="photo-caption">Best Times With You 💖</p>
+                    </div>
+                </div>
+                <div class="carousel-item" style="--i:4">
+                    <div class="photo-card" data-index="4">
+                        <img src="pics/WhatsApp Image 2026-09-11 at 9.24.47 PM.jpeg" alt="Perfect Pair">
+                        <p class="photo-caption">We're Perfect Together 😎</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Lightbox Overlay -->
+    <div id="photoLightbox" class="photo-lightbox" onclick="closeLightbox()">
+        <div class="lightbox-inner">
+            <img id="lightboxImg" src="" alt="">
+            <p id="lightboxCaption" class="lightbox-caption"></p>
+            <p class="lightbox-hint">Tap anywhere to close</p>
+        </div>
+    </div>
+
+    <!-- Scene 6: Her Solo Beauty -->
+    <section id="scene6" class="scene">
+        <div class="solo-gallery-container">
+            <h2 class="scene-title">The Most Beautiful Girl 🌟</h2>
+            <p class="instruction">Swipe through your beautiful photos 💕</p>
+            <p class="swipe-hint">← swipe →</p>
+            <div class="solo-gallery">
+                <div class="solo-card">
+                    <img src="pics/WhatsApp Image 2026-09-11 at 9.24.47 PM (1).jpeg" alt="Beautiful Siddhi">
+                    <p class="solo-caption">Absolutely Gorgeous 😍</p>
+                </div>
+                <div class="solo-card">
+                    <img src="pics/WhatsApp Image 2026-09-11 at 9.24.48 PM.jpeg" alt="Lovely Siddhi">
+                    <p class="solo-caption">My Stunning Queen 👑</p>
+                </div>
+                <div class="solo-card">
+                    <img src="pics/WhatsApp Image 2026-09-11 at 9.24.48 PM (1).jpeg" alt="Pretty Siddhi">
+                    <p class="solo-caption">Pure Perfection ✨</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scene 7: Birthday Cake & Wishes -->
+    <section id="scene7" class="scene">
+        <div class="cake-container">
+            <h2 class="scene-title">Make a Wish, My Love! 🎂</h2>
+            <div class="birthday-cake">
+                <div class="cake-layers">
+                    <div class="cake-layer layer3"></div>
+                    <div class="cake-layer layer2"></div>
+                    <div class="cake-layer layer1"></div>
+                </div>
+                <div class="candles" id="candles">
+                    <div class="candle"><div class="flame">🔥</div></div>
+                    <div class="candle"><div class="flame">🔥</div></div>
+                    <div class="candle"><div class="flame">🔥</div></div>
+                    <div class="candle"><div class="flame">🔥</div></div>
+                    <div class="candle"><div class="flame">🔥</div></div>
+                </div>
+            </div>
+            <p class="instruction blow-instruction">Click on the candles to blow them out! 💨</p>
+            <div class="wish-message" id="wishMessage"></div>
+        </div>
+    </section>
+
+    <!-- Scene 8: Heart Photo Collage -->
+    <section id="scene8" class="scene">
+        <div class="heart-collage-container">
+            <h2 class="scene-title">You're in My Heart Always 💗</h2>
+            <div class="heart-shape">
+                <svg viewBox="0 0 500 500" class="heart-svg">
+                    <defs>
+                        <clipPath id="heartClip">
+                            <path d="M250,450 C150,350 50,250 50,150 C50,100 75,50 125,50 C175,50 220,100 250,150 C280,100 325,50 375,50 C425,50 450,100 450,150 C450,250 350,350 250,450 Z"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <div class="heart-photos" style="clip-path: url(#heartClip)">
+                    <div class="beating-heart">❤️</div>
+                </div>
+            </div>
+            <p class="heart-caption">You make my heart beat faster! 💓</p>
+        </div>
+    </section>
+
+    <!-- Scene 9: Love Letter -->
+    <section id="scene9" class="scene">
+        <div class="letter-container">
+            <h2 class="scene-title">A Letter From My Heart 💌</h2>
+            <div class="envelope" id="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body"></div>
+                <div class="heart-seal">💕</div>
+            </div>
+            <div class="letter-paper" id="letterPaper">
+                <div class="letter-content">
+                    <p class="letter-greeting">My Dearest Siddhi,</p>
+                    <p class="letter-text">
+                        On this special day, I want you to know how incredibly lucky I am to have you in my life. 
+                        You're not just my girlfriend – you're my best friend, my partner in crime, my everything! 💕
+                    </p>
+                    <p class="letter-text">
+                        Your smile brightens my darkest days, your laugh is my favorite melody, 
+                        and your love gives me strength. Every moment with you feels like magic! ✨
+                    </p>
+                    <p class="letter-text">
+                        Thank you for being YOU – for your kindness, your beautiful soul, 
+                        and for loving me the way you do. I promise to always cherish you, 
+                        make you smile, and love you more with each passing day! 🌹
+                    </p>
+                    <p class="letter-text">
+                        Happy Birthday to the most amazing person in my world! 
+                        May all your dreams come true, my love! 🎂🎉
+                    </p>
+                    <p class="letter-signature">
+                        Forever Yours,<br>
+                        With All My Love 💖<br>
+                        <span class="signature-line">Harsh</span>
+                    </p>
+                </div>
+            </div>
+            <p class="instruction" id="letterInstruction">Click the envelope to open 💌</p>
+        </div>
+    </section>
+
+    <!-- Scene 10: Final Surprise -->
+    <section id="scene10" class="scene">
+        <div class="final-surprise-container">
+            <h2 class="scene-title">One Last Thing... 🎁</h2>
+            <div class="gift-box" id="giftBox">
+                <div class="gift-lid"></div>
+                <div class="gift-body"></div>
+                <div class="gift-ribbon-v"></div>
+                <div class="gift-ribbon-h"></div>
+                <div class="gift-bow">🎀</div>
+            </div>
+            <div class="surprise-message" id="surpriseMessage">
+                <h3>My Promise to You 💍</h3>
+                <p>I promise to:</p>
+                <ul>
+                    <li>💕 Love you unconditionally every single day</li>
+                    <li>😊 Make you smile even on your worst days</li>
+                    <li>🤗 Support you in everything you do</li>
+                    <li>🌟 Be your biggest cheerleader</li>
+                    <li>💑 Stand by your side through everything</li>
+                    <li>💋 Give you endless kisses and hugs</li>
+                </ul>
+                <h3 class="final-message">Happy Birthday, My Love! 🎉💖</h3>
+                <p class="special-note">You're the best thing that ever happened to me! ✨</p>
+            </div>
+            <p class="instruction">Click the gift to reveal! 🎁</p>
+            <div class="confetti-container" id="confettiContainer"></div>
+        </div>
+        <button class="restart-btn" onclick="restartJourney()">Experience Again 💕</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
